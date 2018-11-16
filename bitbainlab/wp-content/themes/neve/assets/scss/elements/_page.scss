@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.neve-main {
+  flex: 1 auto;
+}
+
+.archive-container, .single-page-container {
+  padding-top: $spacing;
+}
+
+.nv-page-title-wrap.nv-big-title {
+  border-bottom: $muted-border;
+  background-color: #f7f7f7;
+  .nv-page-title {
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+  }
+}
+
+@mixin page--laptop() {
+  .archive-container, .single-page-container {
+    padding-top: $spacing-lg;
+  }
+}
