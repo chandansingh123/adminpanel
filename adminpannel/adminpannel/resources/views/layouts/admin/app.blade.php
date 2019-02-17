@@ -1,144 +1,120 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html>
 
-
-<!DOCTYPE html><html class=''>
 <head>
-<script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script>
-<script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script>
-<script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script>
-<meta charset='UTF-8'><meta name="robots" content="noindex">
-<link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
-<link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
-<link rel="canonical" href="https://codepen.io/jaca90/pen/vZJZMx?depth=everything&order=popularity&page=10&q=statistics&show_forks=false" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+    <!-- Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
-<link rel="stylesheet" href="{{asset('css/style.css')}}" />
-</head><body>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
-<body class="sidebar-is-reduced">
-  <header class="l-header">
-    <div class="l-header__inner clearfix">
-      <div class="c-header-icon js-hamburger">
-        <div class="hamburger-toggle"><span class="bar-top"></span><span class="bar-mid"></span><span class="bar-bot"></span></div>
-      </div>
-      <div class="c-header-icon has-dropdown"><span class="c-badge c-badge--header-icon animated shake">87</span><i class="fa fa-bell"></i>
-        <div class="c-dropdown c-dropdown--notifications">
-          <div class="c-dropdown__header"></div>
-          <div class="c-dropdown__content"></div>
+    <!-- Bootstrap Core Css -->
+    <link href="{{asset('admin/plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="{{asset('admin/plugins/node-waves/waves.css')}}" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="{{asset('admin/plugins/animate-css/animate.css')}}" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="{{asset('admin/plugins/morrisjs/morris.css')}}" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="{{asset('admin/css/themes/all-themes.css')}}" rel="stylesheet" />
+</head>
+
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
         </div>
-      </div>
-      <div class="c-search">
-        <input class="c-search__input u-input" placeholder="Search..." type="text"/>
-      </div>
-      <div class="header-icons-group">
-        <div class="c-header-icon basket"><span class="c-badge c-badge--header-icon animated shake">12</span><i class="fa fa-shopping-basket"></i></div>
-        <div class="c-header-icon logout"><i class="fa fa-power-off"></i></div>
-      </div>
     </div>
-  </header>
-  <div class="l-sidebar">
-    <div class="logo">
-      <div class="logo__txt">D</div>
-    </div>
-    <div class="l-sidebar__content">
-      <nav class="c-menu js-menu">
-        <ul class="u-list">
-          <li class="c-menu__item is-active" data-toggle="tooltip" title="Flights">
-            <div class="c-menu__item__inner"><i class="fa fa-plane"></i>
-              <div class="c-menu-item__title"><span>Flights</span></div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="index.html">ADMINBSB - MATERIAL DESIGN</a>
             </div>
-          </li>
-          <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Modules">
-            <div class="c-menu__item__inner"><i class="fa fa-puzzle-piece"></i>
-              <div class="c-menu-item__title"><span>Modules</span></div>
-              <div class="c-menu-item__expand js-expand-submenu"><i class="fa fa-angle-down"></i></div>
-            </div>
-            <ul class="c-menu__submenu u-list">
-              <li>Payments</li>
-              <li>Maps</li>
-              <li>Notifications</li>
-            </ul>
-          </li>
-          <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Statistics">
-            <div class="c-menu__item__inner"><i class="fa fa-bar-chart"></i>
-              <div class="c-menu-item__title"><span>Statistics</span></div>
-            </div>
-          </li>
-          <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Gifts">
-            <div class="c-menu__item__inner"><i class="fa fa-gift"></i>
-              <div class="c-menu-item__title"><span>Gifts</span></div>
-            </div>
-          </li>
-          <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Settings">
-            <div class="c-menu__item__inner"><i class="fa fa-cogs"></i>
-              <div class="c-menu-item__title"><span>Settings</span></div>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+            
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        @include('layouts.admin.sidenav')
+        <!-- #END# Left Sidebar -->
+    </section>
+
+    @yield('content')
+
+    
+    <!-- Jquery Core Js -->
+    <script src="{{asset('admin/plugins/jquery/jquery.min.js')}}"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="{{asset('admin/plugins/bootstrap/js/bootstrap.js')}}"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="{{asset('admin/plugins/bootstrap-select/js/bootstrap-select.js')}}"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="{{asset('admin/plugins/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="{{asset('admin/plugins/node-waves/waves.js')}}"></script>
+
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="{{asset('admin/plugins/jquery-countto/jquery.countTo.js')}}"></script>
+
+    <!-- Morris Plugin Js -->
+    <script src="{{asset('admin/plugins/raphael/raphael.min.js')}}"></script>
+    <script src="{{asset('admin/plugins/morrisjs/morris.js')}}"></script>
+
+    <!-- ChartJs -->
+    <script src="{{asset('admin/plugins/chartjs/Chart.bundle.js')}}"></script>
+
+    <!-- Flot Charts Plugin Js -->
+    <script src="{{asset('admin/plugins/flot-charts/jquery.flot.js')}}"></script>
+    <script src="{{asset('admin/plugins/flot-charts/jquery.flot.resize.js')}}"></script>
+    <script src="{{asset('admin/plugins/flot-charts/jquery.flot.pie.js')}}"></script>
+    <script src="{{asset('admin/plugins/flot-charts/jquery.flot.categories.js')}}"></script>
+    <script src="{{asset('admin/plugins/flot-charts/jquery.flot.time.js')}}"></script>
+
+    <!-- Sparkline Chart Plugin Js -->
+    <script src="{{asset('admin/plugins/jquery-sparkline/jquery.sparkline.js')}}"></script>
+
+    <!-- Custom Js -->
+    <script src="{{asset('admin/js/admin.js')}}"></script>
+    <script src="{{asset('admin/js/pages/index.js')}}"></script>
+
 </body>
-<main class="l-main">
-  <div class="content-wrapper content-wrapper--with-bg">
 
-  @yield('content')
-
-  </div>
-</main>
-<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script src='https://use.fontawesome.com/2188c74ac9.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-<script >"use strict";
-
-var Dashboard = function () {
-	var global = {
-		tooltipOptions: {
-			placement: "right"
-		},
-		menuClass: ".c-menu"
-	};
-
-	var menuChangeActive = function menuChangeActive(el) {
-		var hasSubmenu = $(el).hasClass("has-submenu");
-		$(global.menuClass + " .is-active").removeClass("is-active");
-		$(el).addClass("is-active");
-
-		// if (hasSubmenu) {
-		// 	$(el).find("ul").slideDown();
-		// }
-	};
-
-	var sidebarChangeWidth = function sidebarChangeWidth() {
-		var $menuItemsTitle = $("li .menu-item__title");
-
-		$("body").toggleClass("sidebar-is-reduced sidebar-is-expanded");
-		$(".hamburger-toggle").toggleClass("is-opened");
-
-		if ($("body").hasClass("sidebar-is-expanded")) {
-			$('[data-toggle="tooltip"]').tooltip("destroy");
-		} else {
-			$('[data-toggle="tooltip"]').tooltip(global.tooltipOptions);
-		}
-	};
-
-	return {
-		init: function init() {
-			$(".js-hamburger").on("click", sidebarChangeWidth);
-
-			$(".js-menu li").on("click", function (e) {
-				menuChangeActive(e.currentTarget);
-			});
-
-			$('[data-toggle="tooltip"]').tooltip(global.tooltipOptions);
-		}
-	};
-}();
-
-Dashboard.init();
-//# sourceURL=pen.js
-</script>
-</body></html>
+</html>

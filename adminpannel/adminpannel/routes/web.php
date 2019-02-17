@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/slider', 'Admin\SliderController@index')->name('slider-index');
+Route::get('/slider/create', 'Admin\SliderController@create')->name('slider-create');
+Route::post('/slider/store', 'Admin\SliderController@store')->name('slider-store');
+Route::get('/slider/{id}/edit', 'Admin\SliderController@edit')->name('slider-edit');
+Route::put('/slider/{id}/update', 'Admin\SliderController@update')->name('slider-update');
+Route::get('/slider/{id}', 'Admin\SliderController@delete')->name('slider-delete');
